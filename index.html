@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <style>
+      button {
+        height: 40px;
+        width: 200px;
+        padding: 5px;
+        margin: 10px;
+      }
+      #promise-all-success-runner {
+        background-color: lightgreen;
+      }
+
+      #promise-all-fail-runner {
+        background-color: lightcoral;
+      }
+
+      #promise-race-success-runner {
+        background-color: lightblue;
+      }
+
+      #promise-race-fail-runner {
+        background-color: lightpink;
+      }
+      #promise-race-success-mixed-runner {
+        background-color: lightyellow;
+      }
+      .container {
+        margin: 0 30px;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .container div {
+        flex: 0 1 50%;
+      }
+
+      .list-item-good {
+        color: green;
+      }
+      .list-item-bad {
+        color: red;
+      }
+      #timeCapsule {
+        font-size: 30px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <button id="promise-all-success-runner">Promise.all() With Success</button>
+        <button id="promise-all-fail-runner">Promise.all() With Failure</button>
+        <button id="promise-race-success-runner">Promise.race() With Success</button>
+        <button id="promise-race-fail-runner">Promise.race() With Failure</button>
+        <button id="promise-race-success-mixed-runner">Special Promise.race()</button>
+    </div>
+    <div>
+        <button id="promise-callback-hell">Promise count to 2</button>
+        <button id="async-count2">Async/Await count 2</button>
+        <button id="promise-error">Promise error handled</button>
+        <button id="async-error">Async/Await uncaught error</button>
+        <button id="async-handled-error">Async/Await handled error</button>
+        <button id="async-handled-mixin">Async + Promise handled error</button>
+    </div>
+    <div class="container">
+        <div>
+            <h3>Promise Run Results:</h3>
+            <ul id="all-promise-results"></ul>
+        </div>
+      <div> 
+          <h3>Timer:</h3>
+          <p id="timeCapsule"> 0 sec. </p>
+      </div>
+    </div>
+    
+  </body>
+  <script src="./index.bundle.js"></script>
+</html>
